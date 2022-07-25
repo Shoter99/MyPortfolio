@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import TitlePageBtn from './components/TitlePageBtn';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className='flex direction-row justify-evenly items-center h-screen'>
+        <div>
+          <span className='text-7xl text-neutral-700'>Dawid</span>
+          <br />
+          <span className='text-orange-500 text-8xl'>Roszman</span>
+        </div>
+        <div>
+          <TitlePageBtn text="Projects" />
+          <div className='p-2'></div>
+          <TitlePageBtn text="Resume" />
+        </div>
+      </div>
     </div>
   );
 }
