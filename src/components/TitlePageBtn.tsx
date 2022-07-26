@@ -3,7 +3,7 @@ const TitlePageBtn = ({ text, link }: { text: string, link: string }) => {
 
     const scrollToId = () => {
         const element = document.querySelector(`#${link}`)
-        element?.scrollIntoView({behavior: 'smooth', block: 'center'})
+        element?.scrollIntoView({behavior: 'smooth', block: 'start'})
     }
 
     return (
