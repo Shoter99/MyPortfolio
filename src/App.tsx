@@ -3,6 +3,7 @@ import './App.css';
 import ArrowUp from './utils/uparrow.svg';
 import TitlePageBtn from './components/TitlePageBtn';
 import ProjectCard from './components/ProjectCard';
+import { projects } from './utils/text'
 
 function App() {
   
@@ -37,10 +38,11 @@ function App() {
       <section id="projects" className='snap-start min-h-screen bg-neutral-200 p-4 md:p-10 flex flex-col items-center'>
           <h1 className="text-neutral-700 font-bold text-3xl md:text-6xl">My Projects</h1>
           <div className="grid grid-cols-1 gap-5 mt-10">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            {projects.map((val, index) => (
+              <ProjectCard key={index} values={val}/>
+            )
+
+            )}
           </div>
       </section> 
           <button onClick={goToTop} className='transition duration-1000 absolute right-0 bottom-0 w-8 h-8 m-4 md:m-10 md:w-12 md:h-12 p-1 flex rounded-full justify-center items-center md:hover:w-14 md:hover:h-14'>

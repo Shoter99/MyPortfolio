@@ -8,7 +8,7 @@ export const projects = [
         description: "It's a game created using Godot Engine for Go Godot Jam 3 in a week",
         links: [
             {
-                name: "Check source code on Github",
+                name: "Check on Github",
                 url: "https://github.com/Shoter99/GameJamFirst",
             },
             {
@@ -27,10 +27,6 @@ export const projects = [
                 name: "Check on Github",
                 url: "https://github.com/Shoter99/LudumDare48",
             },
-            {
-                name: "Live version",
-                url: "",
-            }
         ]   
     },
     {
@@ -45,7 +41,7 @@ export const projects = [
             },
             {
                 name: "Live version",
-                url: "shoter99.github.io/WordleClone_React",
+                url: "https://shoter99.github.io/WordleClone_React",
             }
         ]   
     },
@@ -61,13 +57,13 @@ export const projects = [
             },
             {
                 name: "Live version",
-                url: "shoter99.github.io/CountryFlag_Quiz_ReactApp",
+                url: "https://shoter99.github.io/CountryFlag_Quiz_ReactApp",
             }
         ]   
     },
     {
         id: 4,
-        category: "Web Development",
+        category: "Mobile Application",
         name: "Sudoku Solver",
         description: "Mobile App created using React Native with python api",
         links: [
@@ -75,10 +71,6 @@ export const projects = [
                 name: "Check on Github",
                 url: "https://github.com/Shoter99/SudokuSolverWithOpenCV",
             },
-            {
-                name: "Live version",
-                url: "",
-            }
         ]   
     },    
 
