@@ -23,7 +23,7 @@ function App() {
         <div className='text-center md:text-left tracking-[.25rem]'>
           <span className='md:text-7xl text-4xl text-neutral-700'>Dawid</span>
           <br />
-          <span className='text-orange-500 text-5xl md:text-8xl'>Roszman</span>
+          <span className='text-orange-400 text-5xl md:text-8xl'>Roszman</span>
         </div>
         <div className="flex md:block p-3 md:p-0">
           <TitlePageBtn text="Resume" link='aboutme' />
@@ -38,18 +38,18 @@ function App() {
         <br />
         <h3 className='text-xl '>
           My name is Dawid and I have been learning programming for couple of years now. My journey started with 
-          <span className='text-orange-500'> C++</span> then I learned basics of 
-          <span className='text-orange-500'> HTML</span>, 
-          <span className='text-orange-500'> CSS</span>, 
-          <span className='text-orange-500'> JavaScript</span> and 
-          <span className='text-orange-500'> PHP</span>. After these I switch to 
-          <span className='text-orange-500'> Python</span> and learned language and framworks like 
-          <span className='text-orange-500'> Flask</span> and 
-          <span className='text-orange-500'> Django</span>. I also took part in few game jams and used engines like 
-          <span className='text-orange-500'> Unity</span> or 
-          <span className='text-orange-500'> Godot</span> and I had contact with Mobile Development and 
-          <span className='text-orange-500'> React Native</span>. Currently I am learning 
-          <span className='text-orange-500'> ReactJS</span>.
+          <span className='text-orange-400'> C++</span> then I learned basics of 
+          <span className='text-orange-400'> HTML</span>, 
+          <span className='text-orange-400'> CSS</span>, 
+          <span className='text-orange-400'> JavaScript</span> and 
+          <span className='text-orange-400'> PHP</span>. After these I switch to 
+          <span className='text-orange-400'> Python</span> and learned language and framworks like 
+          <span className='text-orange-400'> Flask</span> and 
+          <span className='text-orange-400'> Django</span>. I also took part in few game jams and used engines like 
+          <span className='text-orange-400'> Unity</span> or 
+          <span className='text-orange-400'> Godot</span> and I had contact with Mobile Development and 
+          <span className='text-orange-400'> React Native</span>. Currently I am learning 
+          <span className='text-orange-400'> ReactJS</span>.
         </h3>
       </div>
       </section>
