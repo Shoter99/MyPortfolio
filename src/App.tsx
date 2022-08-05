@@ -33,10 +33,10 @@ function App() {
       </section>
       <section id="aboutme" className='snap-start h-screen bg-neutral-700 flex flex-col items-center p-4 md:p-10'>
       <h1 className="text-neutral-200 font-bold text-3xl md:text-6xl">About me</h1>
-      <div className='text-neutral-200 w-[60%] m-10 border-neutral-200 p-8 rounded border-2'>
-        <h2 className='text-3xl '>Hi!</h2>
+      <div className='text-neutral-200 md:w-[60%] md:m-10 border-neutral-200 md:p-8 p-2 mt-4 rounded border-2'>
+        <h2 className='md:text-3xl '>Hi!</h2>
         <br />
-        <h3 className='text-xl '>
+        <h3 className='md:text-xl '>
           My name is Dawid and I have been learning programming for couple of years now. My journey started with 
           <span className='text-orange-400'> C++</span> then I learned basics of 
           <span className='text-orange-400'> HTML</span>, 
@@ -65,8 +65,7 @@ function App() {
           <div className='mt-5'>More projects can be found on my <a className='text-orange-500 underline' href="https://www.github.com/Shoter99">Github</a></div>
       <div className="pt-16"></div>
       </section> 
-      
-          <button onClick={goToTop} className='transition duration-1000 absolute right-0 bottom-0 w-8 h-8 m-4 md:m-10 md:w-12 md:h-12 p-1 flex rounded-full justify-center items-center md:hover:w-14 md:hover:h-14'>
+          <button onClick={goToTop} className='transition duration-700 absolute right-0 bottom-0 w-8 h-8 m-4 md:m-10 md:w-12 md:h-12 p-1 flex rounded-full justify-center items-center hover:-translate-y-5'>
           <img src={ArrowUp} alt="Arrow Up"/>
           </button>
     </div>
