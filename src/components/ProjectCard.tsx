@@ -26,15 +26,15 @@ const ProjectCard = (props : Props) => {
             <br />
             <h3 className="text-justify">{props.values.description}</h3>
         </div>
-        <div className="mx-4 h-[200px] rounded border-x-2 hidden md:block border border-slate-200 w-[0px]"></div>
+        <div className="mx-4 h-[80%] rounded border-x-2 hidden md:block border border-slate-200 w-[0px]"></div>
         <div className='py-5 md:mt-0 px-10'>
             {props.values.links.map((val, id) => (
-                <>
+                <div key={id}>
                     <h2>{val.name} 
                     <a target="_blank" rel="noreferrer" href={val.url} className='text-orange-500 italic pl-2'>here</a>
                     </h2>
                     <br />
-                </>
+                </div>
             ))}
         </div>
     </div>
