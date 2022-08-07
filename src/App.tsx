@@ -13,10 +13,6 @@ function App() {
 
   }
   
-
-  
-
-
   return (
     <div className="snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden">
       <section id="home" className='snap-start flex md:flex-row flex-col justify-center md:justify-evenly items-center h-screen'>
@@ -36,7 +32,7 @@ function App() {
       <div className='text-neutral-200 md:w-[60%] md:m-10 border-neutral-200 md:p-8 p-2 mt-4 rounded border-2'>
         <h2 className='md:text-3xl '>Hi!</h2>
         <br />
-        <h3 className='md:text-xl '>
+        <h3 className='md:text-xl text-justify'>
           My name is Dawid and I have been learning programming for couple of years now. My journey started with 
           <span className='text-orange-400'> C++</span> then I learned basics of 
           <span className='text-orange-400'> HTML</span>, 
@@ -50,6 +46,9 @@ function App() {
           <span className='text-orange-400'> Godot</span> and I had contact with Mobile Development and 
           <span className='text-orange-400'> React Native</span>. Currently I am learning 
           <span className='text-orange-400'> ReactJS</span>.
+          <br />
+          <a className='text-orange-400 underline cursor-pointer'> Here you can see my CV</a>
+          
         </h3>
       </div>
       </section>

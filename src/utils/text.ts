@@ -5,7 +5,7 @@ export const projects = [
         id: 0,
         category: "Game Development",
         name: "Minute to Evolve",
-        description: "It's a game created using Godot Engine for Go Godot Jam 3 in a week",
+        description: "Game created in Godot. 2D Platformer where you need to collect points to evolve and get new powers. Made for Go Godot 3 in a week.",
         links: [
             {
                 name: "Check on Github",
@@ -21,7 +21,7 @@ export const projects = [
         id: 1,
         category: "Game Development",
         name: "Go Deeper",
-        description: "It's a game created using Unity Engine for Ludum Dare 48 in 48h",
+        description: "My first game created using Unity for LudumDare48. Simple 2D platformer but instead of jumping up you are falling deeper and deeper.",
         links: [
             {
                 name: "Check on Github",
@@ -33,7 +33,7 @@ export const projects = [
         id: 2,
         category: "Web Development",
         name: "Wordle Clone",
-        description: "Web app created using ReactJs",
+        description: "As name suggested it is Wordle Clone created with React and it is fully responsive.",
         links: [
             {
                 name: "Check on Github",
@@ -49,7 +49,7 @@ export const projects = [
         id: 3,
         category: "Web Development",
         name: "Country Flag Quiz",
-        description: "Web app created using ReactJs",
+        description: "Fully responsive web app created with React. It's using external api in order to extract data for the quiz.",
         links: [
             {
                 name: "Check on Github",
@@ -65,7 +65,7 @@ export const projects = [
         id: 4,
         category: "Mobile Application",
         name: "Sudoku Solver",
-        description: "Mobile App created using React Native with python api",
+        description: "Mobile App created with React Native where you can take a photo of a sudoku board and then the photo is send to server where sudoku is solved and results are send back to app. Server is created using Python and FastAPI. Server is using Tesorflow to read numbers from photo.",
         links: [
             {
                 name: "Check on Github",
