@@ -29,7 +29,7 @@ function App() {
       </section>
       <section id="aboutme" className='snap-start h-screen bg-neutral-700 flex flex-col items-center p-4 md:p-10'>
       <h1 className="text-neutral-200 font-bold text-3xl md:text-6xl">About me</h1>
-      <div className='text-neutral-200 md:w-[60%] md:m-10 border-neutral-200 md:p-8 p-2 mt-4 rounded border-2'>
+      <div className='text-neutral-200 md:w-[60%] md:m-10 border-neutral-200 md:p-8 p-2 mt-4 rounded border-2 overflow-auto'>
         <h2 className='md:text-3xl '>Hi!</h2>
         <br />
         <h3 className='md:text-xl text-justify'>
@@ -46,16 +46,26 @@ function App() {
           <span className='text-orange-400'> Godot</span>. I also had contact with Mobile Development and 
           <span className='text-orange-400'> React Native</span>. Currently I am learning 
           <span className='text-orange-400'> ReactJS</span>.
-          <br /><br />
-          My CV -
-          <span> </span>
-          <a href={process.env.PUBLIC_URL + '/CV.pdf'} target='_blank' rel='noreferrer' className='text-orange-400 underline cursor-pointer'>Polish Version</a>
-          <span> | </span>
-          <a href="https://resume.io/r/O93tWGpTz" target='_blank' rel='noreferrer' className='text-orange-400 underline cursor-pointer'> English Version</a>
-
           <br />
-          <a href="https://www.github.com/Shoter99" target="_blank" rel='noreferrer' className='text-orange-400 underline cursor-pointer'>My Github</a>
+          <br className='hidden md:block'/>
+          <div className='md:flex text-center md:text-left'>
+          <div>
+            My CV
+          </div>
+          <span className='md:block hidden px-2'> - </span>
+          <div>
+          <a href={process.env.PUBLIC_URL + '/CV.pdf'} target='_blank' rel='noreferrer' className='text-orange-400 underline cursor-pointer'>Polish</a>
+
           
+          <span className='px-2'> | </span>
+
+          <a href="https://resume.io/r/O93tWGpTz" target='_blank' rel='noreferrer' className='text-orange-400 underline cursor-pointer'> English</a>
+          </div>
+          </div>
+          <div className='text-center md:text-left'>
+            <a href="https://www.github.com/Shoter99" target="_blank" rel='noreferrer' className='text-orange-400 underline cursor-pointer'>My Github</a>
+
+          </div>
         </h3>
       </div>
       </section>
