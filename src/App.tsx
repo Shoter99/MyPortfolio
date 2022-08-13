@@ -33,18 +33,18 @@ function App() {
         <h2 className='md:text-3xl '>Hi!</h2>
         <br />
         <h3 className='md:text-xl text-justify'>
-          My name is Dawid and I have been learning programming for couple of years now. My journey started with 
+          My name is Dawid and I have been learning programming for a couple of years now. My journey started with 
           <span className='text-orange-400'> C++</span> then I learned basics of 
           <span className='text-orange-400'> HTML</span>, 
           <span className='text-orange-400'> CSS</span>, 
           <span className='text-orange-400'> JavaScript</span> and 
-          <span className='text-orange-400'> PHP</span>. After these I switch to 
-          <span className='text-orange-400'> Python</span> and learned language and framworks like 
+          <span className='text-orange-400'> PHP</span>. After these I switched to 
+          <span className='text-orange-400'> Python</span> and learned language and frameworks like 
           <span className='text-orange-400'> Flask</span> and 
-          <span className='text-orange-400'> Django</span>. I also took part in few game jams and used engines like 
+          <span className='text-orange-400'> Django</span>. I also took part in a few game jams and used engines like 
           <span className='text-orange-400'> Unity</span> or 
-          <span className='text-orange-400'> Godot</span>. I also had contact with Mobile Development and 
-          <span className='text-orange-400'> React Native</span>. Currently I am learning 
+          <span className='text-orange-400'> Godot</span>. I had contact with Mobile Development and 
+          <span className='text-orange-400'> React Native</span> as well. Currently I am learning 
           <span className='text-orange-400'> ReactJS</span>.
           <br />
           <br className='hidden md:block'/>
