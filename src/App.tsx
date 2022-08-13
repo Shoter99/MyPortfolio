@@ -22,9 +22,9 @@ function App() {
           <span className='text-orange-400 text-5xl md:text-8xl'>Roszman</span>
         </div>
         <div className="flex md:block p-3 md:p-0">
-          <TitlePageBtn text="Resume" link='aboutme' />
+          <TitlePageBtn text="My Resume" link='aboutme' />
           <div className='p-2'></div>
-          <TitlePageBtn link="projects" text="Projects" />
+          <TitlePageBtn link="projects" text="My Projects" />
         </div>
       </section>
       <section id="aboutme" className='snap-start h-screen bg-neutral-700 flex flex-col items-center p-4 md:p-10'>

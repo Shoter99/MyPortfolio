@@ -48,7 +48,7 @@ export const projects = [
     {
         id: 3,
         category: "Web Development",
-        name: "Country Flag Quiz",
+        name: "Guess the flag",
         description: "Fully responsive web app created with React. It's using external api in order to extract data for the quiz.",
         links: [
             {
