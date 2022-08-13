@@ -43,11 +43,18 @@ function App() {
           <span className='text-orange-400'> Flask</span> and 
           <span className='text-orange-400'> Django</span>. I also took part in few game jams and used engines like 
           <span className='text-orange-400'> Unity</span> or 
-          <span className='text-orange-400'> Godot</span> and I had contact with Mobile Development and 
+          <span className='text-orange-400'> Godot</span>. I also had contact with Mobile Development and 
           <span className='text-orange-400'> React Native</span>. Currently I am learning 
           <span className='text-orange-400'> ReactJS</span>.
+          <br /><br />
+          My CV -
+          <span> </span>
+          <a href={process.env.PUBLIC_URL + '/CV.pdf'} target='_blank' rel='noreferrer' className='text-orange-400 underline cursor-pointer'>Polish Version</a>
+          <span> | </span>
+          <a href="https://resume.io/r/O93tWGpTz" target='_blank' rel='noreferrer' className='text-orange-400 underline cursor-pointer'> English Version</a>
+
           <br />
-          <a className='text-orange-400 underline cursor-pointer'> Here you can see my CV</a>
+          <a href="https://www.github.com/Shoter99" target="_blank" rel='noreferrer' className='text-orange-400 underline cursor-pointer'>My Github</a>
           
         </h3>
       </div>
@@ -61,7 +68,7 @@ function App() {
 
             )}
           </div>
-          <div className='mt-5'>More projects can be found on my <a className='text-orange-500 underline' href="https://www.github.com/Shoter99">Github</a></div>
+          <div className='mt-5'>More projects can be found on my <a className='text-orange-500 underline' target='_blank' rel='noreferrer' href="https://www.github.com/Shoter99">Github</a></div>
       <div className="pt-16"></div>
       </section> 
           <button onClick={goToTop} className='transition duration-700 absolute right-0 bottom-0 w-8 h-8 m-4 md:m-10 md:w-12 md:h-12 p-1 flex rounded-full justify-center items-center hover:-translate-y-5'>

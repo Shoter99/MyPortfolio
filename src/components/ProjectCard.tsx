@@ -31,7 +31,7 @@ const ProjectCard = (props : Props) => {
             {props.values.links.map((val, id) => (
                 <div key={id}>
                     <h2>{val.name} 
-                    <a target="_blank" rel="noreferrer" href={val.url} className='text-orange-400 italic pl-2'>here</a>
+                    <a target="_blank" rel="noreferrer" href={val.url} className='text-orange-400 italic pl-2 hover:underline'>here</a>
                     </h2>
                     <br />
                 </div>
