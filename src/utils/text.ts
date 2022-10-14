@@ -72,9 +72,26 @@ export const projects = [
                 url: "https://github.com/Shoter99/SudokuSolverWithOpenCV",
             },
         ]   
-    },    
+    },   
+     {
+        id: 5,
+        category: "Web Application",
+        name: "Pentago",
+        description: "Web application created using ReactJs, copy of board game Pentago with a twist.",
+        links: [
+            {
+                name: "Check on Github",
+                url: "https://github.com/Shoter99/Pentago",
+            },
+            {
+                name: "Live version",
+                url: "https://shoter99.github.io/Pentago"
+            }
+        ]   
+    }, 
 
 ]
+
 
 
 // {
