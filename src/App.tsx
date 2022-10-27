@@ -3,7 +3,7 @@ import "./App.css";
 import ArrowUp from "./utils/uparrow.svg";
 import TitlePageBtn from "./components/TitlePageBtn";
 import ProjectCard from "./components/ProjectCard";
-import { projects } from "./utils/text";
+import { projects } from "./utils/en_text";
 import Aboutme_pl from "./components/Aboutme_pl";
 
 function App() {

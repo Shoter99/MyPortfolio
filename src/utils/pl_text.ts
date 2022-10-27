@@ -1,6 +1,10 @@
-export const aboutme = ""
+export const main_text_pl = {
+    my_resume: "Moje CV",
+    my_projects: "Moje projekty",
+    about_me: "O mnie"
+}
 
-export const projects = [
+export const projects_pl = [
     {
         id: 0,
         category: "Game Development",
