@@ -75,7 +75,7 @@ export const projects = [
     },   
      {
         id: 5,
-        category: "Web Application",
+        category: "Web Development",
         name: "Pentago",
         description: "Web application created using ReactJs, copy of board game Pentago with a twist.",
         links: [
