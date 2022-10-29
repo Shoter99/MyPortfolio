@@ -1,12 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import ArrowUp from "./utils/uparrow.svg";
 import TitlePageBtn from "./components/TitlePageBtn";
 import ProjectCard from "./components/ProjectCard";
 import { projects } from "./utils/en_text";
-import Aboutme_pl from "./components/Aboutme_pl";
+import { projects_pl } from "./utils/pl_text";
+import AboutMePL from "./components/AboutMePL";
+import AboutMeEN from "./components/AboutMeEN";
+import { main_text_en } from "./utils/en_text";
+import { main_text_pl } from "./utils/pl_text";
 
 function App() {
+  const [lang, setLang] = useState("PL");
+  const [langFile, setLangFile] = useState(main_text_en);
+  const [projectFile, setProjectFile] = useState(projects);
+  const changeLang = (lang: String) => {
+    setLangFile(lang == "PL" ? main_text_pl : main_text_en);
+    setProjectFile(lang == "PL" ? projects_pl : projects);
+  };
+
   const goToTop = () => {
     const element = document.querySelector(`#home`);
     element?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -16,17 +28,36 @@ function App() {
     <div className="snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden">
       <section
         id="home"
-        className="snap-start flex md:flex-row flex-col justify-center md:justify-evenly items-center h-screen"
+        className="relative snap-start flex md:flex-row flex-col justify-center md:justify-evenly items-center h-screen"
       >
+        <div className="text-neutral-700 absolute top-0 right-0 p-5 text-lg">
+          <button
+            onClick={() => {
+              setLang("PL");
+              changeLang("PL");
+            }}
+          >
+            PL
+          </button>
+          |
+          <button
+            onClick={() => {
+              setLang("EN");
+              changeLang("EN");
+            }}
+          >
+            EN
+          </button>
+        </div>
         <div className="text-center md:text-left tracking-[.25rem]">
           <span className="md:text-7xl text-4xl text-neutral-700">Dawid</span>
           <br />
           <span className="text-orange-400 text-5xl md:text-8xl">Roszman</span>
         </div>
         <div className="flex md:block p-3 md:p-0">
-          <TitlePageBtn text="My Resume" link="aboutme" />
+          <TitlePageBtn text={langFile.about_me} link="aboutme" />
           <div className="p-2"></div>
-          <TitlePageBtn link="projects" text="My Projects" />
+          <TitlePageBtn link="projects" text={langFile.my_projects} />
         </div>
       </section>
       <section
@@ -34,31 +65,33 @@ function App() {
         className="snap-start h-screen bg-neutral-700 flex flex-col items-center p-4 md:p-10"
       >
         <h1 className="text-neutral-200 font-bold text-3xl md:text-6xl">
-          About me
+          {langFile.about_me}
         </h1>
-        <Aboutme_pl />
-     </section>
+        {lang == "PL" ? <AboutMePL /> : <AboutMeEN />}
+      </section>
       <section
         id="projects"
         className="snap-start min-h-screen bg-neutral-200 p-4 md:p-10 flex flex-col items-center"
       >
         <h1 className="text-neutral-700 font-bold text-3xl md:text-6xl">
-          My Projects
+          {langFile.my_projects}
         </h1>
         <div className="grid grid-cols-1 gap-5 mt-10">
-          {projects.map((val, index) => (
+          {projectFile.map((val, index) => (
             <ProjectCard key={index} values={val} />
           ))}
         </div>
         <div className="mt-5">
-          More projects can be found on my{" "}
+          {lang == "PL"
+            ? "Wiecej projektów można znaleźć na moim "
+            : "More projects can be found on my "}
           <a
             className="text-orange-500 underline"
             target="_blank"
             rel="noreferrer"
             href="https://www.github.com/Shoter99"
           >
-            Github
+            {lang == "PL" ? "Githb'ie" : "Github"}
           </a>
         </div>
         <div className="pt-16"></div>

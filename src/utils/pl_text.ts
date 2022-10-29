@@ -7,7 +7,7 @@ export const main_text_pl = {
 export const projects_pl = [
     {
         id: 0,
-        category: "Game Development",
+        category: "Produkcja gier",
         name: "Minute to Evolve",
         description: "Game created in Godot. 2D Platformer where you need to collect points to evolve and get new powers. Made for Go Godot 3 in a week.",
         links: [
