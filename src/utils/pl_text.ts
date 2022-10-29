@@ -9,35 +9,35 @@ export const projects_pl = [
         id: 0,
         category: "Produkcja gier",
         name: "Minute to Evolve",
-        description: "Game created in Godot. 2D Platformer where you need to collect points to evolve and get new powers. Made for Go Godot 3 in a week.",
+        description: "Gra tworzona przy użyciu Godot. Platformówka 2D, gdzie trzeba zbierać punkty, aby ewoluować i dostać się na kolejne poziomy. Gra stworzona dla tygodniowego game jam'u GoGodot 3",
         links: [
             {
-                name: "Check on Github",
+                name: "Sprawdź kod na Github'ie",
                 url: "https://github.com/Shoter99/GameJamFirst",
             },
             {
-                name: "Live version",
+                name: "Wersja live",
                 url: "https://shoter99.itch.io/minute-to-evolve",
             }
     ]
     },
     {
         id: 1,
-        category: "Game Development",
+        category: "Produkcja gier",
         name: "Go Deeper",
-        description: "My first game created using Unity for LudumDare48. Simple 2D platformer but instead of jumping up you are falling deeper and deeper.",
+        description: "Moja pierwsza gra stworzona przy użyciu Unity dla LudumDare48. Prosta platformówka 2D, ale zamiast podskakiwać, spadasz coraz głębiej.",
         links: [
             {
-                name: "Check on Github",
+                name: "Sprawdź kod na Github'ie",
                 url: "https://github.com/Shoter99/LudumDare48",
             },
         ]   
     },
     {
         id: 2,
-        category: "Web Development",
+        category: "Aplikacje web'we",
         name: "Wordle Clone",
-        description: "As name suggested it is Wordle Clone created with React and it is fully responsive.",
+        description: "Jak sama nazwa wskazuje, jest to klon Wordle stworzony w React i jest w pełni responsywna.",
         links: [
             {
                 name: "Check on Github",
@@ -51,9 +51,9 @@ export const projects_pl = [
     },
     {
         id: 3,
-        category: "Web Development",
+        category: "Aplikacje web'owe",
         name: "Guess the flag",
-        description: "Fully responsive web app created with React. It's using external api in order to extract data for the quiz.",
+        description: "W pełni responsywna aplikacja internetowa stworzona w React. Wykorzystuje zewnętrzne API w celu wyodrębnienia danych do quizu.",
         links: [
             {
                 name: "Check on Github",
