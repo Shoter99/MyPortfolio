@@ -6,6 +6,22 @@ export const main_text_pl = {
 
 export const projects_pl = [
     {
+        id: 5,
+        category: "Aplikacje web'owe",
+        name: "Pentago",
+        description: "Gra planszowa \"Pentago\" w wersji cyfrowej.",
+        links: [
+            {
+                name: "Sprawdź kod na Github'ie",
+                url: "https://github.com/Shoter99/Pentago",
+            },
+            {
+                name: "Wersja live",
+                url: "https://shoter99.github.io/Pentago"
+            }
+        ]   
+    },
+    {
         id: 0,
         category: "Produkcja gier",
         name: "Minute to Evolve",
@@ -31,6 +47,10 @@ export const projects_pl = [
                 name: "Sprawdź kod na Github'ie",
                 url: "https://github.com/Shoter99/LudumDare48",
             },
+            {
+                name: "Pobierz na telefon",
+                url: "https://drive.google.com/file/d/1CoKcpfbykTqbgO17XORe-r-Q3tE6ckLc/view?usp=sharing"
+            }
         ]   
     },
     {
@@ -40,11 +60,11 @@ export const projects_pl = [
         description: "Jak sama nazwa wskazuje, jest to klon Wordle stworzony w React i jest w pełni responsywna.",
         links: [
             {
-                name: "Check on Github",
+                name: "Sprawdź kod na Github'ie",
                 url: "https://github.com/Shoter99/WordleClone_React",
             },
             {
-                name: "Live version",
+                name: "Wersja live",
                 url: "https://shoter99.github.io/WordleClone_React",
             }
         ]   
@@ -56,43 +76,27 @@ export const projects_pl = [
         description: "W pełni responsywna aplikacja internetowa stworzona w React. Wykorzystuje zewnętrzne API w celu wyodrębnienia danych do quizu.",
         links: [
             {
-                name: "Check on Github",
+                name: "Sprawdź kod na Github'ie",
                 url: "https://github.com/Shoter99/CountryFlag_Quiz_ReactApp",
             },
             {
-                name: "Live version",
+                name: "Wersja live",
                 url: "https://shoter99.github.io/CountryFlag_Quiz_ReactApp",
             }
         ]   
     },
     {
         id: 4,
-        category: "Mobile Application",
+        category: "Aplikacje na telefon",
         name: "Sudoku Solver",
-        description: "Mobile App created with React Native where you can take a photo of a sudoku board and then the photo is send to server where sudoku is solved and results are send back to app. Server is created using Python and FastAPI. Server is using Tesorflow to read numbers from photo.",
+        description: "Aplikacja mobilna stworzona za pomocą React Native, w której można zrobić zdjęcie planszy sudoku, a następnie zdjęcie jest wysyłane na serwer, gdzie sudoku jest rozwiązywane, a wyniki są odsyłane do aplikacji. Serwer jest tworzony przy użyciu Pythona i FastAPI. Serwer używa Tesorflow do odczytywania liczb ze zdjęcia.",
         links: [
             {
-                name: "Check on Github",
+                name: "Sprawdź kod na Github'ie",
                 url: "https://github.com/Shoter99/SudokuSolverWithOpenCV",
             },
         ]   
     },   
-     {
-        id: 5,
-        category: "Web Development",
-        name: "Pentago",
-        description: "Web application created using ReactJs, copy of board game Pentago with a twist.",
-        links: [
-            {
-                name: "Check on Github",
-                url: "https://github.com/Shoter99/Pentago",
-            },
-            {
-                name: "Live version",
-                url: "https://shoter99.github.io/Pentago"
-            }
-        ]   
-    }, 
 
 ]
 

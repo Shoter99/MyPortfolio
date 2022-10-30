@@ -5,6 +5,22 @@ export const main_text_en = {
 }
 export const projects = [
     {
+        id: 5,
+        category: "Web Development",
+        name: "Pentago",
+        description: "Web application created using ReactJs, copy of board game Pentago with a twist.",
+        links: [
+            {
+                name: "Check on Github",
+                url: "https://github.com/Shoter99/Pentago",
+            },
+            {
+                name: "Live version",
+                url: "https://shoter99.github.io/Pentago"
+            }
+        ]   
+    },
+    {
         id: 0,
         category: "Game Development",
         name: "Minute to Evolve",
@@ -30,6 +46,10 @@ export const projects = [
                 name: "Check on Github",
                 url: "https://github.com/Shoter99/LudumDare48",
             },
+            {
+                name: "Download for mobile",
+                url: "https://drive.google.com/file/d/1CoKcpfbykTqbgO17XORe-r-Q3tE6ckLc/view?usp=sharing"
+            }
         ]   
     },
     {
@@ -76,22 +96,7 @@ export const projects = [
             },
         ]   
     },   
-     {
-        id: 5,
-        category: "Web Development",
-        name: "Pentago",
-        description: "Web application created using ReactJs, copy of board game Pentago with a twist.",
-        links: [
-            {
-                name: "Check on Github",
-                url: "https://github.com/Shoter99/Pentago",
-            },
-            {
-                name: "Live version",
-                url: "https://shoter99.github.io/Pentago"
-            }
-        ]   
-    }, 
+    
 
 ]
 

@@ -11,18 +11,21 @@ import { main_text_en } from "./utils/en_text";
 import { main_text_pl } from "./utils/pl_text";
 
 function App() {
-  const [lang, setLang] = useState("PL");
+  const [lang, setLang] = useState(localStorage.getItem("lang") || "EN");
   const [langFile, setLangFile] = useState(main_text_en);
   const [projectFile, setProjectFile] = useState(projects);
-  const changeLang = (lang: String) => {
-    setLangFile(lang == "PL" ? main_text_pl : main_text_en);
-    setProjectFile(lang == "PL" ? projects_pl : projects);
+  const changeLang = (l: string = lang) => {
+    setLangFile(l == "PL" ? main_text_pl : main_text_en);
+    setProjectFile(l == "PL" ? projects_pl : projects);
   };
 
   const goToTop = () => {
     const element = document.querySelector(`#home`);
     element?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+  useEffect(() => {
+    changeLang();
+  }, []);
 
   return (
     <div className="snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden">
@@ -35,6 +38,7 @@ function App() {
             onClick={() => {
               setLang("PL");
               changeLang("PL");
+              localStorage.setItem("lang", "PL");
             }}
           >
             PL
@@ -44,6 +48,7 @@ function App() {
             onClick={() => {
               setLang("EN");
               changeLang("EN");
+              localStorage.setItem("lang", "EN");
             }}
           >
             EN
@@ -78,7 +83,11 @@ function App() {
         </h1>
         <div className="grid grid-cols-1 gap-5 mt-10">
           {projectFile.map((val, index) => (
-            <ProjectCard key={index} values={val} />
+            <ProjectCard
+              key={index}
+              values={val}
+              here={lang === "PL" ? "tutaj" : "here"}
+            />
           ))}
         </div>
         <div className="mt-5">
