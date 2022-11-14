@@ -11,6 +11,16 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
       
-      - name: Deploy website
-        run: npm run build
+      - name: clean cache
+        run: npm cache clean --force
+      - name: install
+        run: npm ci
+      - name: npm install
+        run: npm install
+      - name: deploy
+        run: npm run predeploy && npm run deploy
