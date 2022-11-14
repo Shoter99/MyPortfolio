@@ -103,11 +103,10 @@ function App() {
             {lang == "PL" ? "Githb'ie" : "Github"}
           </a>
         </div>
-        <div className="pt-16"></div>
       </section>
       <button
         onClick={goToTop}
-        className="transition duration-700 absolute right-0 bottom-0 w-8 h-8 m-4 md:m-10 md:w-12 md:h-12 p-1 flex rounded-full justify-center items-center hover:-translate-y-5"
+        className="transition duration-700 fixed right-0 bottom-0 w-8 h-8 m-4 md:m-10 md:w-12 md:h-12 p-1 flex rounded-full justify-center items-center hover:-translate-y-5"
       >
         <img src={ArrowUp} alt="Arrow Up" />
       </button>
