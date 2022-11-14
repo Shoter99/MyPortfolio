@@ -106,9 +106,9 @@ function App() {
       </section>
       <button
         onClick={goToTop}
-        className="transition duration-700 fixed right-0 bottom-0 w-8 h-8 m-4 md:m-10 md:w-12 md:h-12 p-1 flex rounded-full justify-center items-center hover:-translate-y-5"
+        className="transition duration-700 fixed right-0 bottom-0 w-8 h-8 m-4 md:m-10 md:w-12 md:h-12 p-1 flex rounded-full justify-center items-center "
       >
-        <img src={ArrowUp} alt="Arrow Up" />
+        <img className="hover:-translate-y-5" src={ArrowUp} alt="Arrow Up" />
       </button>
     </div>
   );
