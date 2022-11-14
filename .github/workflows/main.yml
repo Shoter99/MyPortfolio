@@ -1,0 +1,15 @@
+name: Publish Website
+
+on:
+  push:
+    branches: [ $default_branch ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Deploy website
+        run: npm run predeploy && npm run deploy
