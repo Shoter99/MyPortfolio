@@ -64,15 +64,33 @@ function App() {
           <div className="p-2"></div>
           <TitlePageBtn link="projects" text={langFile.my_projects} />
         </div>
+        <div className="absolute w-screen -bottom-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#404040"
+              fill-opacity="1"
+              d="M0,160L60,154.7C120,149,240,139,360,165.3C480,192,600,256,720,240C840,224,960,128,1080,112C1200,96,1320,160,1380,192L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
       </section>
       <section
         id="aboutme"
-        className="snap-start h-screen bg-neutral-700 flex flex-col items-center p-4 md:p-10"
+        className="relative snap-start h-screen bg-neutral-700 flex flex-col items-center p-4 md:p-10"
       >
         <h1 className="text-neutral-200 font-bold text-3xl md:text-6xl">
           {langFile.about_me}
         </h1>
         {lang == "PL" ? <AboutMePL /> : <AboutMeEN />}
+        <div className="absolute w-screen -bottom-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#e5e5e5"
+              fill-opacity="1"
+              d="M0,160L60,154.7C120,149,240,139,360,165.3C480,192,600,256,720,240C840,224,960,128,1080,112C1200,96,1320,160,1380,192L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
       </section>
       <section
         id="projects"
