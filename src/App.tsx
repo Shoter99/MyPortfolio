@@ -29,6 +29,7 @@ function App() {
 
   return (
     <div className="snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden">
+      <div className="bg-wrapper"></div>
       <section
         id="home"
         className="relative snap-start flex md:flex-row flex-col justify-center md:justify-evenly items-center h-screen"
@@ -54,7 +55,7 @@ function App() {
             EN
           </button>
         </div>
-        <div className="text-center md:text-left tracking-[.25rem]">
+        <div className="text-center md:text-left tracking-[.25rem] text-shadow">
           <span className="md:text-7xl text-4xl text-neutral-700">Dawid</span>
           <br />
           <span className="text-orange-400 text-5xl md:text-8xl">Roszman</span>
@@ -94,7 +95,7 @@ function App() {
       </section>
       <section
         id="projects"
-        className="snap-start min-h-screen bg-neutral-200 p-4 md:p-10 flex flex-col items-center"
+        className="z-10 relative snap-start min-h-screen bg-neutral-200 p-4 md:p-10 flex flex-col items-center"
       >
         <h1 className="text-neutral-700 font-bold text-3xl md:text-6xl">
           {langFile.my_projects}
