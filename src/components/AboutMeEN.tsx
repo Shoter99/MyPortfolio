@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMeEN = () => {
   return (
-    <div className="text-neutral-200 md:w-[60%] md:m-10 border-neutral-200 md:p-8 p-2 mt-4 rounded border-2 overflow-auto">
+    <div className="bg-neutral-700 text-neutral-200 md:w-[60%] md:m-10 border-neutral-200 md:p-8 p-2 mt-4 rounded border-2 overflow-auto">
       <h2 className="md:text-3xl ">Hi!</h2>
       <br />
       <h3 className="md:text-xl text-justify">

@@ -29,12 +29,12 @@ function App() {
 
   return (
     <div className="snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden">
-      <div className="bg-wrapper"></div>
       <section
         id="home"
-        className="relative snap-start flex md:flex-row flex-col justify-center md:justify-evenly items-center h-screen"
+        className="relative bg-wrapper z-[11] snap-start flex md:flex-row flex-col justify-center md:justify-evenly items-center h-screen"
       >
-        <div className="text-neutral-700 absolute top-0 right-0 p-5 text-lg">
+        {/* <div className="bg-wrapper z-[12]"></div> */}
+        <div className="text-neutral-700 z-10 absolute top-0 right-0 p-5 text-lg bg-wrapper">
           <button
             onClick={() => {
               setLang("PL");
@@ -55,17 +55,17 @@ function App() {
             EN
           </button>
         </div>
-        <div className="text-center md:text-left tracking-[.25rem] text-shadow">
+        <div className="relative z-20 text-center md:text-left tracking-[.25rem] text-shadow">
           <span className="md:text-7xl text-4xl text-neutral-700">Dawid</span>
           <br />
           <span className="text-orange-400 text-5xl md:text-8xl">Roszman</span>
         </div>
-        <div className="flex md:block p-3 md:p-0">
+        <div className="relative z-20 flex md:block p-3 md:p-0">
           <TitlePageBtn text={langFile.about_me} link="aboutme" />
           <div className="p-2"></div>
           <TitlePageBtn link="projects" text={langFile.my_projects} />
         </div>
-        <div className="absolute w-screen -bottom-2">
+        <div className="absolute w-screen z-20 -bottom-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
               fill="#404040"
@@ -77,13 +77,14 @@ function App() {
       </section>
       <section
         id="aboutme"
-        className="relative snap-start h-screen bg-neutral-700 flex flex-col items-center p-4 md:p-10"
+        className="relative z-[10] snap-start h-screen bg-neutral-700 flex flex-col items-center p-4 md:p-10"
       >
-        <h1 className="text-neutral-200 font-bold text-3xl md:text-6xl">
+        <div className="absolute -translate-y-10 w-screen h-screen vortex-bg"></div>
+        <h1 className="text-neutral-200 font-bold text-3xl md:text-6xl text-shadow-black">
           {langFile.about_me}
         </h1>
         {lang == "PL" ? <AboutMePL /> : <AboutMeEN />}
-        <div className="absolute w-screen -bottom-2">
+        <div className="absolute w-screen -bottom-2 z-20">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
               fill="#e5e5e5"
@@ -95,7 +96,7 @@ function App() {
       </section>
       <section
         id="projects"
-        className="z-10 relative snap-start min-h-screen bg-neutral-200 p-4 md:p-10 flex flex-col items-center"
+        className="z-10 relative snap-start min-h-screen bg-neutral-200 p-4 md:p-10 flex flex-col items-center scribble"
       >
         <h1 className="text-neutral-700 font-bold text-3xl md:text-6xl">
           {langFile.my_projects}
@@ -119,15 +120,19 @@ function App() {
             rel="noreferrer"
             href="https://www.github.com/Shoter99"
           >
-            {lang == "PL" ? "Githb'ie" : "Github"}
+            {lang == "PL" ? "Github'ie" : "Github"}
           </a>
         </div>
       </section>
       <button
         onClick={goToTop}
-        className="transition duration-700 fixed right-0 bottom-0 w-8 h-8 m-4 md:m-10 md:w-12 md:h-12 p-1 flex rounded-full justify-center items-center "
+        className="fixed right-0 bottom-0 w-8 h-8 m-4 md:m-10 md:w-12 md:h-12 p-1 z-40 group flex rounded-full justify-center items-center "
       >
-        <img className="hover:-translate-y-5" src={ArrowUp} alt="Arrow Up" />
+        <img
+          className="group-hover:-translate-y-5 transition-all duration-700"
+          src={ArrowUp}
+          alt="Arrow Up"
+        />
       </button>
     </div>
   );

@@ -16,7 +16,7 @@ interface Props {
 
 const ProjectCard = (props: Props) => {
   return (
-    <div className="border border-neutral-700 rounded flex flex-col md:flex-row justify-between md:items-center  text-neutral-200 bg-neutral-700">
+    <div className="border border-neutral-700 rounded shadow-2xl flex flex-col md:flex-row justify-between md:items-center  text-neutral-200 bg-neutral-700">
       <div className="md:w-[600px] p-10">
         <div className="md:flex justify-between">
           <h2 className="font-bold text-xl notranslate">{props.values.name}</h2>
