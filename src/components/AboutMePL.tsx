@@ -16,7 +16,7 @@ const AboutMePL = () => {
         <span className="text-orange-400"> CSS </span>,
         <span className="text-orange-400"> JavaScript</span> i
         <span className="text-orange-400"> PHP</span>. Kolejnym krokiem było
-        nauczyenie się
+        nauczenie się
         <span className="text-orange-400"> Python </span> i związanych z nim
         framework'ów takich jak
         <span className="text-orange-400"> Flask</span> i
