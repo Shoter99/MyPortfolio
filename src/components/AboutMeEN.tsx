@@ -6,33 +6,24 @@ const AboutMeEN = () => {
       <h2 className="md:text-3xl ">Hi!</h2>
       <br />
       <h3 className="md:text-xl text-justify">
-        My name is Dawid I am studying at
-        <span className="text-orange-400"> University of Gdańsk</span> and I
-        have been learning programming for a couple of years now. My journey
-        started with
-        <span className="text-orange-400"> C++</span> then I learned basics of
-        <span className="text-orange-400"> HTML</span>,
-        <span className="text-orange-400"> CSS</span>,
-        <span className="text-orange-400"> JavaScript</span> and
-        <span className="text-orange-400"> PHP</span>. After these I switched to
-        <span className="text-orange-400"> Python</span> and learned language
-        and frameworks like
-        <span className="text-orange-400"> Flask</span> and
-        <span className="text-orange-400"> Django</span>. I also took part in a
-        few{" "}
-        <a
-          target="_blank"
-          href="https://en.wikipedia.org/wiki/Game_jam"
-          className="underline italic"
-        >
-          Game Jams
-        </a>{" "}
-        and used engines like
-        <span className="text-orange-400"> Unity</span> or
-        <span className="text-orange-400"> Godot</span>. I had contact with
-        Mobile Development and
-        <span className="text-orange-400"> React Native</span> as well.
-        Currently I am learning
+        I'm Dawid, a student at{" "}
+        <span className="text-orange-400"> the University of Gdańsk </span>.
+        I've honed my programming skills over the past few years, starting with{" "}
+        <span className="text-orange-400"> C++</span>. From there, I gained a
+        solid foundation in{" "}
+        <span className="text-orange-400">
+          {" "}
+          HTML, CSS, JavaScript, and PHP{" "}
+        </span>
+        . I then shifted my focus to{" "}
+        <span className="text-orange-400"> Python</span> and have since mastered
+        frameworks like{" "}
+        <span className="text-orange-400"> Flask and Django</span>. I have
+        participated in several game jams, utilizing engines such as{" "}
+        <span className="text-orange-400"> Unity and Godot</span>. Additionally,
+        I've dabbled in mobile development and gained experience with{" "}
+        <span className="text-orange-400"> React Native and Flutter</span>.
+        Currently, I'm expanding my skillset by learning{" "}
         <span className="text-orange-400"> ReactJS</span>.
         <br />
         <br className="hidden md:block" />
