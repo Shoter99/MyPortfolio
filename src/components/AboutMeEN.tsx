@@ -1,5 +1,3 @@
-import React from "react";
-
 const AboutMeEN = () => {
   return (
     <div className="bg-neutral-700 relative z-30 text-neutral-200 md:w-[80%] lg:w-[60%] md:m-10 border-neutral-200 md:p-8 p-2 mt-4 rounded border-2 overflow-auto">
@@ -7,17 +5,17 @@ const AboutMeEN = () => {
       <br />
       <h3 className="md:text-xl text-justify">
         I'm Dawid, a student at{" "}
-        <span className="text-orange-400"> the University of Gdańsk </span>.
+        <span className="text-orange-400"> the University of Gdańsk</span>.
         I've honed my programming skills over the past few years, starting with{" "}
         <span className="text-orange-400"> C++</span>. From there, I gained a
         solid foundation in{" "}
         <span className="text-orange-400">
           {" "}
-          HTML, CSS, JavaScript, and PHP{" "}
+          HTML, CSS, JavaScript, and PHP
         </span>
         . I then shifted my focus to{" "}
-        <span className="text-orange-400"> Python</span> and have since mastered
-        frameworks like{" "}
+        <span className="text-orange-400"> Python</span> and have since
+        created few projects using frameworks like{" "}
         <span className="text-orange-400"> Flask and Django</span>. I have
         participated in several game jams, utilizing engines such as{" "}
         <span className="text-orange-400"> Unity and Godot</span>. Additionally,
