@@ -15,8 +15,8 @@ function App() {
   const [langFile, setLangFile] = useState(main_text_en);
   const [projectFile, setProjectFile] = useState(projects);
   const changeLang = (l: string = lang) => {
-    setLangFile(l == "PL" ? main_text_pl : main_text_en);
-    setProjectFile(l == "PL" ? projects_pl : projects);
+    setLangFile(l === "PL" ? main_text_pl : main_text_en);
+    setProjectFile(l === "PL" ? projects_pl : projects);
   };
 
   const goToTop = () => {
@@ -25,7 +25,7 @@ function App() {
   };
   useEffect(() => {
     changeLang();
-  }, []);
+  });
 
   return (
     <div className="snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden">
@@ -83,7 +83,7 @@ function App() {
         <h1 className="text-neutral-200 font-bold text-3xl md:text-6xl text-shadow-black">
           {langFile.about_me}
         </h1>
-        {lang == "PL" ? <AboutMePL /> : <AboutMeEN />}
+        {lang === "PL" ? <AboutMePL /> : <AboutMeEN />}
         <div className="absolute w-screen -bottom-2 z-20">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
@@ -111,7 +111,7 @@ function App() {
           ))}
         </div>
         <div className="mt-5">
-          {lang == "PL"
+          {lang === "PL"
             ? "Wiecej projektów można znaleźć na moim "
             : "More projects can be found on my "}
           <a
@@ -120,7 +120,7 @@ function App() {
             rel="noreferrer"
             href="https://www.github.com/Shoter99"
           >
-            {lang == "PL" ? "Github'ie" : "Github"}
+            {lang === "PL" ? "Github'ie" : "Github"}
           </a>
         </div>
       </section>
