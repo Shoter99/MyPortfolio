@@ -35,13 +35,12 @@ function App() {
     element?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   useEffect(() => {
-    console.log("component update");
     const fetchData = () => {
       getTextData(lang).then((fetched) => {
         const data = fetched;
         setMainText(data.main_text);
         setAboutMe(data.about_me_text.text);
-        setProjects(data.projects);
+        setProjects(data.projects.reverse());
       });
     };
     fetchData();
@@ -87,7 +86,10 @@ function App() {
           <span className="text-orange-400 text-5xl md:text-8xl">Roszman</span>
         </div>
         <div className="relative z-20 flex md:block p-3 md:p-0">
-          <TitlePageBtn text={mainText?.about_me || ""} link="aboutme" />
+          <TitlePageBtn
+            text={mainText?.about_me || "About me"}
+            link="aboutme"
+          />
           <div className="p-2"></div>
           <TitlePageBtn
             link="projects"
@@ -112,7 +114,7 @@ function App() {
         <h1 className="text-neutral-200 font-bold text-3xl md:text-6xl text-shadow-black">
           {mainText?.my_resume}
         </h1>
-        <AboutMe text={aboutMe} />
+        <AboutMe text={aboutMe} lang={lang} />
         <div className="absolute w-screen -bottom-2 z-20">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path

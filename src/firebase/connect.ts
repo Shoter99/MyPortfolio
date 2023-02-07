@@ -1,7 +1,13 @@
 // Import the functions you need from the SDKs you need
 
 import { initializeApp } from "firebase/app";
-import { getFirestore, getDoc, doc, collection } from "firebase/firestore";
+import {
+  getFirestore,
+  getDoc,
+  doc,
+  collection,
+  enableIndexedDbPersistence,
+} from "firebase/firestore";
 
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -30,7 +36,23 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
-
+enableIndexedDbPersistence(db).catch((err) => {
+  if (err.code === "failed-precondition") {
+    // Multiple tabs open, persistence can only be enabled
+    // in one tab at a a time.
+    // ...
+    console.error(
+      "Multiple tabs open, persistence can only be enabled in one tab at a a time."
+    );
+  } else if (err.code === "unimplemented") {
+    // The current browser does not support all of the
+    // features required to enable persistence
+    // ...
+    console.error(
+      "The current browser does not support all of the features required to enable persistence"
+    );
+  }
+});
 interface main_text {
   about_me: string;
   my_projects: string;
@@ -55,7 +77,8 @@ interface link {
 }
 
 export const getTextData = async (lang: string) => {
-  const collectionRef = collection(db, "english-version");
+  let collectionRef = collection(db, "english-version");
+  if (lang === "PL") collectionRef = collection(db, "polish-version");
   const docRef_main_text = doc(db, collectionRef.path, "main_text");
   const docRef_about_me = doc(db, collectionRef.path, "about_me_text");
   const docRef_projects = doc(db, collectionRef.path, "projects");
