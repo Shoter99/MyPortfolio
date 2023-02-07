@@ -25,6 +25,7 @@ const AboutMe = (props: { text: string; lang: string }) => {
         <br className="hidden md:block" />
         <div className="md:flex text-center md:text-left">
           <div>{t.cv}</div>
+          {""}
           <span className="md:block hidden px-2"> - </span>
           <div>
             <a
