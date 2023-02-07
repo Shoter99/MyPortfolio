@@ -1,15 +1,7 @@
 // Import the functions you need from the SDKs you need
 
 import { initializeApp } from "firebase/app";
-import {
-  Firestore,
-  FirestoreSettings,
-  getFirestore,
-  getDoc,
-  doc,
-} from "firebase/firestore";
-
-// TODO: Add SDKs for Firebase products that you want to use
+import { getFirestore, getDoc, doc, collection } from "firebase/firestore";
 
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -39,12 +31,75 @@ export const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
 
-const docRef = doc(db, "english-version", "main_text");
-const docSnap = getDoc(docRef).then((doc) => {
-  if (doc.exists()) {
-    console.log("Document data:", doc.data());
-  } else {
-    // doc.data() will be undefined in this case
-    console.log("No such document!");
-  }
-});
+interface main_text {
+  about_me: string;
+  my_projects: string;
+  my_resume: string;
+}
+interface about_me_text {
+  text: string;
+}
+interface projects_type {
+  projects: project[];
+}
+interface project {
+  id: number;
+  category: string;
+  description: string;
+  name: string;
+  links: link[];
+}
+interface link {
+  name: string;
+  url: string;
+}
+
+export const getTextData = async (lang: string) => {
+  const collectionRef = collection(db, "english-version");
+  const docRef_main_text = doc(db, collectionRef.path, "main_text");
+  const docRef_about_me = doc(db, collectionRef.path, "about_me_text");
+  const docRef_projects = doc(db, collectionRef.path, "projects");
+  const main_text = {
+    about_me: "",
+    my_projects: "",
+    my_resume: "",
+  };
+  const about_me_text = {
+    text: "",
+  };
+  const projects: project[] = [];
+  await getDoc(docRef_main_text).then((doc) => {
+    if (doc.exists()) {
+      const data: main_text = doc.data() as main_text;
+      main_text.about_me = data.about_me;
+      main_text.my_projects = data.my_projects;
+      main_text.my_resume = data.my_resume;
+    } else {
+      // doc.data() will be undefined in this case
+      console.log("No such document!");
+    }
+  });
+  await getDoc(docRef_about_me).then((doc) => {
+    if (doc.exists()) {
+      const data: about_me_text = doc.data() as about_me_text;
+      about_me_text.text = data.text;
+    } else {
+      // doc.data() will be undefined in this case
+      console.log("No such document!");
+    }
+  });
+  await getDoc(docRef_projects).then((doc) => {
+    if (doc.exists()) {
+      const data: projects_type = doc.data() as projects_type;
+      data.projects.forEach((project) => projects.push(project));
+    } else {
+      // doc.data() will be undefined in this case
+      console.log("No such document!");
+    }
+  });
+  return {
+    main_text,
+    about_me_text,
+    projects,
+  };
+};
