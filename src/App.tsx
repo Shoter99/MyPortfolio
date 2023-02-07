@@ -112,7 +112,7 @@ function App() {
       >
         <div className="absolute -translate-y-10 w-screen h-screen vortex-bg"></div>
         <h1 className="text-neutral-200 font-bold text-3xl md:text-6xl text-shadow-black">
-          {mainText?.my_resume}
+          {mainText?.about_me}
         </h1>
         <AboutMe text={aboutMe} lang={lang} />
         <div className="absolute w-screen -bottom-2 z-20">
