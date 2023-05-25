@@ -8,6 +8,7 @@ import {
   collection,
   enableIndexedDbPersistence,
 } from "firebase/firestore";
+import { getStorage, listAll, ref } from "firebase/storage";
 
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -16,26 +17,30 @@ import {
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
 
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  apiKey: "AIzaSyClnDZ7q1LyZ6MBgVv8aVhGyYZXXEeAEdM",
 
-  projectId: process.env.REACT_APP_PROJECT_ID,
+  authDomain: "portfoliowebsite-81b53.firebaseapp.com",
 
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  projectId: "portfoliowebsite-81b53",
 
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  storageBucket: "portfoliowebsite-81b53.appspot.com",
 
-  appId: process.env.REACT_APP_APP_ID,
+  messagingSenderId: "820099049403",
 
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
+  appId: "1:820099049403:web:1ccabe0043e669f83f469e",
+
+  measurementId: "G-KYCNY2N15K"
+
 };
+
 
 // Initialize Firebase
 
 export const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
+const storage = getStorage(app);
 enableIndexedDbPersistence(db).catch((err) => {
   if (err.code === "failed-precondition") {
     // Multiple tabs open, persistence can only be enabled
@@ -70,6 +75,7 @@ interface project {
   description: string;
   name: string;
   links: link[];
+  order: number;
 }
 interface link {
   name: string;
@@ -126,3 +132,4 @@ export const getTextData = async (lang: string) => {
     projects,
   };
 };
+

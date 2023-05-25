@@ -6,8 +6,13 @@ import ProjectCard from "./components/ProjectCard";
 import { getTextData } from "./firebase/connect";
 import AboutMe from "./components/AboutMe";
 import pacman from "./utils/pacman.gif";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   interface main_text {
     about_me: string;
     my_projects: string;
@@ -19,6 +24,7 @@ function App() {
     description: string;
     name: string;
     links: link[];
+    order: number;
   }
   interface link {
     name: string;
@@ -40,7 +46,7 @@ function App() {
         const data = fetched;
         setMainText(data.main_text);
         setAboutMe(data.about_me_text.text);
-        setProjects(data.projects.reverse());
+        setProjects(data.projects);
       });
     };
     fetchData();
@@ -55,13 +61,16 @@ function App() {
       </>
     );
   return (
-    <div className="snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden">
+    <div className="snap">
       <section
         id="home"
         className="relative bg-wrapper z-[11] snap-start flex md:flex-row flex-col justify-center md:justify-evenly items-center h-screen"
       >
         {/* <div className="bg-wrapper z-[12]"></div> */}
-        <div className="text-neutral-700 z-10 absolute top-0 right-0 p-5 text-lg bg-wrapper">
+        <div
+          data-aos="fade-down-left"
+          className="text-neutral-700 z-10 absolute top-0 right-0 p-5 text-lg bg-wrapper"
+        >
           <button
             onClick={() => {
               setLang("PL");
@@ -80,23 +89,28 @@ function App() {
             EN
           </button>
         </div>
-        <div className="relative z-20 text-center md:text-left tracking-[.25rem] text-shadow">
+        <div
+          data-aos="fade-left"
+          className="relative z-20 text-center md:text-left tracking-[.25rem] text-shadow"
+        >
           <span className="md:text-7xl text-4xl text-neutral-700">Dawid</span>
           <br />
           <span className="text-orange-400 text-5xl md:text-8xl">Roszman</span>
         </div>
         <div className="relative z-20 flex md:block p-3 md:p-0">
           <TitlePageBtn
+            animation="fade-down"
             text={mainText?.about_me || "About me"}
             link="aboutme"
           />
-          <div className="p-2"></div>
+          <div data-aos="fade-up" className="p-2"></div>
           <TitlePageBtn
+            animation="fade-up"
             link="projects"
             text={mainText?.my_projects || "My Projects"}
           />
         </div>
-        <div className="absolute w-screen z-20 -bottom-1">
+        <div className="absolute w-screen z-1 -bottom-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
               fill="#404040"
@@ -133,13 +147,16 @@ function App() {
           {mainText?.my_projects}
         </h1>
         <div className="grid grid-cols-1 gap-5 mt-10">
-          {projects?.map((val, index) => (
-            <ProjectCard
-              key={index}
-              values={val}
-              here={lang === "PL" ? "tutaj" : "here"}
-            />
-          ))}
+          {projects
+            ?.sort((a,b) => a.order - b.order)
+            .map((val, index) => (
+              <ProjectCard
+                key={index}
+                values={val}
+                index={index}
+                here={lang === "PL" ? "tutaj" : "here"}
+              />
+            ))}
         </div>
         <div className="mt-5">
           {lang === "PL"

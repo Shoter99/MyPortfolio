@@ -25,6 +25,10 @@
   }
 }
 
+strong{
+  color: rgb(251, 146, 60);
+}
+
 
 body {
   background-color: rgb(229, 229, 229);
@@ -54,7 +58,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.2;
-  animation: spin 60s linear infinite;
   position: absolute;
 }
 .scribble{
