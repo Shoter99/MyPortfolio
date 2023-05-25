@@ -17,7 +17,7 @@ const AboutMe = (props: { text: string; lang: string }) => {
     };
   }
   return (
-    <div data-aos="zoom-in" className="bg-neutral-700 relative z-30 text-neutral-200 md:w-[80%] lg:w-[60%] md:m-10 border-neutral-200 md:p-8 p-2 mt-4 rounded border-2 overflow-auto">
+    <div data-aos="zoom-in" className="bg-neutral-700 relative z-30 text-neutral-200 w-screen md:w-[80%] lg:w-[60%] md:m-10 border-neutral-200 md:p-8 p-2 mt-4 rounded border-2 overflow-auto">
       <h2 className="md:text-3xl ">{t.hi}</h2>
       <br />
       <h3 className="md:text-xl text-justify">
