@@ -61,7 +61,7 @@ function App() {
       </>
     );
   return (
-    <div className="snap">
+    <div className="">
       <section
         id="home"
         className="relative bg-wrapper z-[11] snap-start flex md:flex-row flex-col justify-center md:justify-evenly items-center h-screen"
