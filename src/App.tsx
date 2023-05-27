@@ -213,7 +213,7 @@ function App() {
             className="text-orange-500 underline"
             target="_blank"
             rel="noreferrer"
-            href="https://www.github.com/Shoter99"
+            href="https://www.github.com/DawidRoszman"
           >
             {lang === "PL" ? "Github'ie" : "Github"}
           </a>

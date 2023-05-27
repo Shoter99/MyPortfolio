@@ -54,7 +54,7 @@ const AboutMe = (props: { text: string; lang: string }) => {
         </div>
         <div className="text-center md:text-left">
           <a
-            href="https://www.github.com/Shoter99"
+            href="https://www.github.com/DawidRoszman"
             target="_blank"
             rel="noreferrer"
             className="text-orange-400 underline cursor-pointer"
