@@ -6,7 +6,7 @@ const AboutMe = (props: { text: string; lang: string }) => {
     pl: "Polish",
     my: "My Github",
     // cv: "My Resume",
-    email: "Email me:",
+    // email: "Email me:",
   };
   if (props.lang !== "EN") {
     t = {
@@ -14,7 +14,7 @@ const AboutMe = (props: { text: string; lang: string }) => {
       en: "Angielskie",
       pl: "Polskie",
       my: "Mój Github",
-      email: "Napisz do mnie:",
+      // email: "Napisz do mnie:",
       // cv: "Moje CV",
     };
   }
@@ -57,20 +57,19 @@ const AboutMe = (props: { text: string; lang: string }) => {
         {/*     </a> */}
         {/*   </div> */}
         {/* </div> */}
-        <div className="md:flex text-center md:text-left">
-          <div className="mr-2">{t.email}</div>
+        <div className="py-2 md:flex text-center md:text-left">
           <div>
             <a href="mailto:dawidroszman@gmail.com">
               <strong>dawidroszman@gmail.com</strong>
             </a>
           </div>
         </div>
-        <div className="text-center md:text-left">
+        <div className="py-2 text-center md:text-left">
           <a href="https://www.linkedin.com/in/dawid-roszman-4ba728267/" target="_blank" rel="noreferrer">
             <strong>LinkedIn</strong>
           </a>
         </div>
-        <div className="text-center md:text-left">
+        <div className="py-2 text-center md:text-left">
           <a
             href="https://www.github.com/DawidRoszman"
             target="_blank"

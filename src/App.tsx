@@ -214,7 +214,7 @@ function App() {
               />
             ))}
         </div>
-        <div className="mt-5">
+        <div className="mt-5 text-center">
           {lang === "PL"
             ? "Wiecej projektów można znaleźć na moim "
             : "More projects can be found on my "}
