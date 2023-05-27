@@ -66,6 +66,11 @@ const AboutMe = (props: { text: string; lang: string }) => {
           </div>
         </div>
         <div className="text-center md:text-left">
+          <a href="https://www.linkedin.com/in/dawid-roszman-4ba728267/" target="_blank" rel="noreferrer">
+            <strong>LinkedIn</strong>
+          </a>
+        </div>
+        <div className="text-center md:text-left">
           <a
             href="https://www.github.com/DawidRoszman"
             target="_blank"
