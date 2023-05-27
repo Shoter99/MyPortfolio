@@ -97,7 +97,10 @@ function App() {
           <br />
           <span className="text-orange-400 text-5xl md:text-8xl">Roszman</span>
         </div>
-        <div data-aos="fade-right" className="relative z-20 flex md:block p-3 md:p-0">
+        <div
+          data-aos="fade-right"
+          className="relative z-20 flex md:block p-3 md:p-0"
+        >
           <TitlePageBtn
             animation="fade-down"
             text={mainText?.about_me || "About me"}
@@ -149,7 +152,10 @@ function App() {
         </div>
 
         <div className="absolute -translate-y-10 w-screen h-screen vortex-bg"></div>
-        <h1 data-aos="zoom-in" className="text-neutral-200 font-bold z-10 md:z-0 text-3xl md:text-6xl text-shadow-black">
+        <h1
+          data-aos="zoom-in"
+          className="text-neutral-200 font-bold z-10 md:z-0 text-3xl md:text-6xl text-shadow-black"
+        >
           {mainText?.about_me}
         </h1>
         <AboutMe text={aboutMe} lang={lang} />
@@ -190,7 +196,10 @@ function App() {
             ></path>
           </svg>
         </div>
-        <h1 data-aos="fade-in" className="text-neutral-700 font-bold z-10 md:z-0 text-3xl md:text-6xl">
+        <h1
+          data-aos="fade-in"
+          className="text-neutral-700 font-bold z-10 md:z-0 text-3xl md:text-6xl"
+        >
           {mainText?.my_projects}
         </h1>
         <div className="grid grid-cols-1 gap-5 mt-10">
@@ -210,12 +219,11 @@ function App() {
             ? "Wiecej projektów można znaleźć na moim "
             : "More projects can be found on my "}
           <a
-            className="text-orange-500 underline"
             target="_blank"
             rel="noreferrer"
             href="https://www.github.com/DawidRoszman"
           >
-            {lang === "PL" ? "Github'ie" : "Github"}
+            <strong className="text-orange-600">{lang === "PL" ? "Github'ie" : "Github"}</strong>
           </a>
         </div>
       </section>
